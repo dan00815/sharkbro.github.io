@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Baby－Chiu LaLa</title>
+    <link rel="icon" href="/123.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="homework.css" />
+  </head>
+
+  <body>
+    <div class="title">
+      我的寶貝<span
+        style="padding: 5px; color: black; font-size: 20px; font-weight: normal"
+        >(請點選查看詳細介紹)</span
+      >
+    </div>
+    <!-- Lizzie Living 荔枝生活館 -->
+    <div class="list">
+      <span class="label" onclick="inf()">基本資料</span>
+      <span class="label" onclick="fav()">寶的喜好</span>
+      <span class="label" onclick="notice()">注意事項</span>
+      <span class="label" onclick="pic()">點滴照片</span>
+      <span class="label" onclick="buy()">周邊訂購</span>
+    </div>
+
+    <div class="content" id="content" style="display: none">
+      1. 名字：邱怡瑄<br />
+      2. 綽號：邱拉拉、粉紅卡比<br />
+      3. 生日：86/10/24<br />
+      4. 星座：天蠍座<br />
+      5. 家鄉：糖的故鄉-台南
+      <br /><br />
+      <hr />
+    </div>
+
+    <div class="content" id="favorite" style="display: none">
+      喜歡的食物：義大利麵<br />
+      喜歡的國家：日本 <img src="japan.jpeg" width="50px" /><br />
+      喜歡的小三：白白<img src="white.webp" width="60px" />鯊西米<img
+        src="shark.jfif"
+        width="70px"
+      /><br />
+      喜歡的事情：睡覺、算塔羅、吃東西？
+      <br /><br />
+      <hr />
+    </div>
+
+    <div class="noti">
+      <ul id="noticeinf" style="display: none">
+        <li>吃漢堡不加生菜</li>
+        <li>蛋餅要吃軟的</li>
+        <li>要好好看訊息</li>
+        <li>騎車不要往後轉</li>
+        <li>是<span style="color: red">日期大師</span></li>
+      </ul>
+    </div>
+
+    <div id="pict" style="display: none">
+      <hr />
+      <br /><br />
+      <img src="2.png" class="pic" height="500px" width:500px />
+      <img src="babe&bear.jpg" class="pic" height="800px" width:500px />
+    </div>
+
+    <div id="buy" style="display: none">
+      <img src="./卡比.jfif" alt="卡比爹斯" class="kirby" />
+      <div style="border: 3px solid lightpink; font-size: 18px">
+        <form action="" method="GET">
+          <label for="buyer">訂購人姓名:</label>
+          <input
+            type="text"
+            id="buyer"
+            name="buyer-name"
+            required
+            placeholder="請輸入您的真實姓名"
+          />
+          <label for="gender">性別</label>
+          <select name="gender" id="gender">
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+            <option value="other">其他</option>
+          </select>
+          <label for="age">年齡:</label>
+          <input type="number" style="width: 50px" max="125" min="1" /><br />
+          <label for="email">信箱</label>
+          <input type="email" name="email" id="email" /><br />
+          <label for="creditcard">信用卡號</label>
+          <input
+            type="text"
+            name="creditcard"
+            id="creditcard"
+            maxlength="16"
+            required
+          /><br />
+          <label for="deadline-y/m">到期年/月</label>
+          <input
+            type="text"
+            name="deadline-y"
+            maxlength="2"
+            style="width: 30px"
+          />
+          /
+          <input
+            type="text"
+            name="deadline-y"
+            maxlength="2"
+            style="width: 30px"
+          />
+          <label for="safePass">安全碼</label>
+          <input
+            type="password"
+            name="safePass"
+            id="safePass"
+            maxlength="3"
+          /><br />
+          <label for="color">顏色:</label>
+          <input type="radio" name="color" required />紅色
+          <input type="radio" name="color" />粉紅色
+          <input type="radio" name="color" />黃色 <br />
+          <input type="checkbox" checked />是否願意接收最新產品資訊
+          <br /><button>提交訂購資料</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function inf() {
+        var inform = document.getElementById("content");
+        if (inform.style.display === "none") {
+          inform.style.display = "block";
+        } else inform.style.display = "none";
+      }
+
+      function fav() {
+        var favorite = document.getElementById("favorite");
+        if (favorite.style.display === "none") {
+          favorite.style.display = "block";
+        } else favorite.style.display = "none";
+      }
+
+      function notice() {
+        var noticeinf = document.getElementById("noticeinf");
+        if (noticeinf.style.display === "none") {
+          noticeinf.style.display = "block";
+        } else noticeinf.style.display = "none";
+      }
+
+      function pic() {
+        var picture = document.getElementById("pict");
+        if (picture.style.display === "none") {
+          picture.style.display = "block";
+        } else picture.style.display = "none";
+      }
+
+      function buy() {
+        var buyblock = document.getElementById("buy");
+        if (buyblock.style.display === "none") {
+          buyblock.style.display = "block";
+        } else buyblock.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -19,8 +19,6 @@
   line-height: 80px;
   background-color: #ffbb66;
   text-align: center;
-  display:flex;
-  flex-wrap:wrap;
 }
 
 .label {
